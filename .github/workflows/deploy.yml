@@ -15,4 +15,4 @@ jobs:
         run: docker build -t app .
 
       - name: Run Docker container
-        run: docker run -d -p 80:80 app
+        run: docker run app
