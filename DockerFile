@@ -1,14 +1,5 @@
-# Use a base image
-FROM nginx:alpine
-
-# Set working directory
+FROM python:3.11-slim
 WORKDIR /app
-
-# Copy project files into the container
-COPY . /usr/share/nginx/html
-
-# Expose port
+COPY . .
 EXPOSE 80
-
-# Run the application
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["python", "app.py"]
