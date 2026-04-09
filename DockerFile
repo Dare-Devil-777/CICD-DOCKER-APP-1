@@ -1,0 +1,14 @@
+# Use a base image
+FROM nginx:alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files into the container
+COPY . /usr/share/nginx/html
+
+# Expose port
+EXPOSE 80
+
+# Run the application
+CMD ["nginx", "-g", "daemon off;"]
